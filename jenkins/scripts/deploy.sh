@@ -6,4 +6,3 @@ sleep 5
 CONTAINER_IP=$(docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' my-apache-php-app)
 set +x
 echo "Application is running at http://${CONTAINER_IP}"
-
